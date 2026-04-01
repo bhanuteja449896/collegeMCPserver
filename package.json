@@ -1,0 +1,26 @@
+{
+  "name": "college-mcp-server",
+  "version": "1.0.0",
+  "description": "Role-based college management MCP server using Postgres",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "build": "node src/scripts/build-check.js",
+    "db:migrate": "node src/scripts/run-sql.js sql/schema.sql",
+    "db:seed": "node src/scripts/run-sql.js sql/seed.sql",
+    "supabase:test": "node src/scripts/test-supabase-client.js",
+    "prisma:generate": "prisma generate"
+  },
+  "devDependencies": {
+    "prisma": "^6.7.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "@prisma/client": "^6.19.3",
+    "@supabase/supabase-js": "^2.49.4",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "pg": "^8.13.1"
+  }
+}
